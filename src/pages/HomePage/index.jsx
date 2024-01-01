@@ -38,7 +38,7 @@ export const HomePage = () => {
       {journey ? (
         <>
           <JourneyDetail journey={journey} />
-          <SeatPicker />
+          <SeatPicker seats={journey.seats} />
         </>
       ) : null}
 
