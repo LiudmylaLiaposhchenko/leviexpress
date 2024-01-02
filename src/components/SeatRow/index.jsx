@@ -1,7 +1,7 @@
 import './style.css';
 import { Seat } from '../Seat';
 
-export const SeatRow = ({ row, rowSelectedSeat }) => {
+export const SeatRow = ({ row, rowSelectedSeat, onSeatSelected }) => {
   return (
     <div className="seat-row">
       {row.map((r) => (
@@ -10,6 +10,7 @@ export const SeatRow = ({ row, rowSelectedSeat }) => {
           number={r.number}
           isOccupied={r.isOccupied}
           isSelected={rowSelectedSeat === r.number}
+          onSelect={onSeatSelected}
         />
       ))}
     </div>
